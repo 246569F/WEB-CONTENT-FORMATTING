@@ -1,0 +1,30 @@
+/* Table styling for Krakow landmarks */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #2e7d32;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  padding: 12px 14px;
+  border: 1px solid #2e7d32;
+  color: #1f1f1f;
+  vertical-align: top;
+}
+
+thead th {
+  background-color: #0b3d0b; /* dark green header */
+  color: #ffffff;
+}
+
+/* Column widths */
+th:nth-child(1), td:nth-child(1) { width: 25%; }  /* Landmark */
+th:nth-child(2), td:nth-child(2) { width: 15%; }  /* Year of Construction */
+th:nth-child(3), td:nth-child(3) { width: 20%; }  /* Architectural Style */
+th:nth-child(4), td:nth-child(4) { width: 40%; }  /* Significance */
+
+/* Hover effect on table rows */
+tbody tr:hover {
+  background-color: #e8f5e9;
+}

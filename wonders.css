@@ -1,0 +1,146 @@
+/* wonders.css — The Wonders of the Natural World */
+
+:root{
+  --bg: #f6f9f7;
+  --panel: #ffffff;
+  --border: #d7e0da;
+  --shadow: 0 8px 18px rgba(0,0,0,.08);
+  --link: #1b7f3a;
+  --link-hover: #0f5b28;
+  --h2-bg: #eef6f0;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, Verdana, sans-serif; /* consistent font */
+  background: var(--bg);
+  color: #1f2937;
+  line-height: 1.55;
+}
+
+.container{
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 22px 0 40px;
+}
+
+h1{
+  text-align: center; /* center main heading */
+  margin: 0 0 18px;
+  letter-spacing: .2px;
+}
+
+.section{
+  margin-bottom: 28px; /* spacing between sections */
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--border); /* borders around sections */
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+/* Section titles */
+h2{
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  background-color: var(--h2-bg); /* soft background */
+  border-left: 6px solid #8bb39a;
+  border-radius: 10px;
+}
+
+/* Different text colors per wonder section */
+.grand-canyon h2,
+.grand-canyon p{
+  color: #1f5e2d; /* dark green */
+}
+
+.great-barrier-reef h2,
+.great-barrier-reef p{
+  color: #0b4f8a; /* blue */
+}
+
+.mount-everest h2,
+.mount-everest p{
+  color: #4b5563; /* gray */
+}
+
+/* Links */
+a{
+  color: var(--link);
+  text-decoration: none; /* remove underline */
+  font-weight: 600;
+}
+a:hover{
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Tables */
+table{
+  width: 100%;
+  border-collapse: collapse; /* uniform borders */
+  margin-top: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+th, td{
+  padding: 12px 14px;         /* padding for readability */
+  border: 1px solid var(--border); /* borders on cells */
+  text-align: left;
+}
+thead th{
+  background: #e7f2ea;
+}
+tbody tr:hover{
+  background: #f1faf4;
+}
+
+/* Form */
+form{
+  margin-top: 10px;
+}
+
+form div{
+  margin-bottom: 12px; /* spacing between form sections */
+}
+
+label{
+  display: inline-block;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+input, textarea, select{
+  width: 100%;               /* wider inputs */
+  padding: 10px 12px;        /* padding inside fields */
+  border: 1px solid #b9c8be; /* border for inputs */
+  border-radius: 10px;
+  font-family: inherit;
+}
+
+textarea{ resize: vertical; }
+
+/* Submit button */
+input[type="submit"]{
+  width: auto;
+  padding: 10px 16px;
+  background-color: #1b7f3a;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+input[type="submit"]:hover{
+  background-color: #0f5b28;
+}
+
+/* Small screens */
+@media (max-width: 520px){
+  .section{ padding: 12px; }
+  th, td{ padding: 10px; }
+}
